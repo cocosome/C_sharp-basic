@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\rlawngus\\Desktop\\jhKim\\Code\\branches\\C-sharp-basic_branch\\20241117\\Hello\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C78D21F3-75DE-4ACF-BBCE-9BE3EB570812}|Hello.csproj|c:\\users\\rlawngus\\desktop\\jhkim\\code\\branches\\c-sharp-basic_branch\\20241117\\hello\\mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C78D21F3-75DE-4ACF-BBCE-9BE3EB570812}|Hello.csproj|solutionrelative:mainapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 225,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3822e751-eb69-4b0e-b301-595a9e4c74d5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainApp.cs",
+              "DocumentMoniker": "C:\\Users\\rlawngus\\Desktop\\jhKim\\Code\\branches\\C-sharp-basic_branch\\20241117\\Hello\\MainApp.cs",
+              "RelativeDocumentMoniker": "MainApp.cs",
+              "ToolTip": "C:\\Users\\rlawngus\\Desktop\\jhKim\\Code\\branches\\C-sharp-basic_branch\\20241117\\Hello\\MainApp.cs",
+              "RelativeToolTip": "MainApp.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T23:48:42.113Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
