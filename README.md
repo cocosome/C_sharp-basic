@@ -145,3 +145,184 @@ public void noChange(int a, int b, out int quotient, outint remainder)
 // 위의 함수처럼, out 키워드가 붙은 매개변수가 호출받은 함수 내에서 값할당되지 않은 경우, 컴파일 에러 발생
 ```
 ---
+## 2024.12.16
+> 학습 목차
+1. Overloading
+2. Params : 가변길이 인수
+3. 명명된 인수
+---
+> 학습 내용
+## 1.Overloading
+- 정의 : 이름은 같으나 매개변수의 자료형이 다른 함수를 선언하여 사용하는 행위
+- 사용 시기 :
+    1. 기존 함수와 동작은 같으나, 매개변수의 자료형이 다를 때
+    2. 기존 함수와 동작은 같으나, 매개변수의 개수가 다를 때
+    3. 1번과 2번상황이 혼재되었을 때
+    * (2번의 경우 overloading 보다는 기존함수의 매개변수에 params를 적용하는것이 좋다)
+- 주의 사항 : 기존 함수와 반환 형식만 다른(= 매개변수의 자료형과 매개변수 갯수는 같음)함수의 overloading은 불가능하다 -> 컴파일러가 어떤 함수를 호출해야하는지 불분명함
+
+<예시1 - overloading의 좋은예>
+```
+public int plus(int a, int b)
+{
+    return a + b;
+}
+public double plus(double a, double b)
+{
+    return a + b;
+}
+public string plus(string a, string b)
+{
+    return a + b;
+}
+public double plus(int a, int b, double c)
+{
+    return a + b + c;
+}
+
+// 함수 이름은 Plus로 동일하나, 자료형이 각각 int double string으로 상이함
+```
+<예시2 - overloading의 나쁜예>
+```
+public int plus(int a, int b)
+{
+    return a + b;
+}
+
+public double plus(int a, int b)
+{
+    return a + b;
+}
+
+//위의 경우 컴파일 에러 발생
+```
+---
+## 2. Params : 가변길이 인수
+- 정의 : 매개변수 갯수가 특정되지 않은 함수에서 매개변수 앞에 붙이는 키워드
+- 주의 사항
+    1. params 키워드를 갖는 변수는 항상 <U>매개변수중 맨 마지막에 위치해야 한다</U> -> 아닐시 **컴파일 에러** 발생
+    2. params 매개변수를 갖는 함수 또한 <U>overloading이 가능하다.</U>
+    3. params 키워드를 갖는 매개변수와 단일 매개변수 둘다 한 함수 내에서 혼용 가능하다.
+
+<예시1 - 기본적인 params 적용 예>
+```
+public class Calculate
+{
+    public int Sum(params int[] nums)
+    {
+        int cnt;
+        int sum = 0;
+        for(cnt = 0; cnt < nums.Length; cnt++)
+        {
+            sum += nums[cnt];
+        }
+        return sum;
+    }
+}
+
+static void Main(string[] args)
+{
+    Calculate cal = new Calculate();
+    Console.WriteLine("total1 : {0}", cal.Sum(1, 2, 3));
+    Console.WriteLine("total2 : {0}", cal.Sum(2, 3, 4));
+    Console.WriteLine("total3 : {0}", cal.Sum(2, 3, 4, 5, 6));
+}
+
+//위의 Main함수에서와 같이, 같은 함수를 호출하지만 매개변수 개수를 달리해도 문제없다.
+```
+
+<예시2 - params의 overloading 적용 예>
+```
+public class Calculate
+{
+    public int Sum(params int[] nums)
+    {
+        int cnt;
+        int sum = 0;
+        for(cnt = 0; cnt < nums.Length; cnt++)
+        {
+            sum += nums[cnt];
+        }
+        return sum;
+    }
+    public double Sum(params double[] nums)
+    {
+        int cnt;
+        double sum = 0;
+        for (cnt = 0; cnt < nums.Length; cnt++)
+        {
+            sum += nums[cnt];
+        }
+        return sum;
+    }
+}
+
+static void Main(string[] args)
+{
+    Calculate cal = new Calculate();
+    Console.WriteLine("total1 : {0}", cal.Sum(2, 3, 4));
+    Console.WriteLine("total2 : {0}", cal.Sum(2, 3, 4, 5, 6));
+    Console.WriteLine("totalDouble1 : {0}", cal.Sum(2.1, 3.1, 4.1, 51, 6));
+    Console.WriteLine("totalDouble2 : {0}", cal.Sum(2.1, 5.1, 6.5));
+}
+
+//위와 같이, 겉보기에는 같은 Sum함수를 호출했지만, 매개변수의 자료형에 따라 다른 함수가 호출될 수 있다.
+```
+<예시3 - params 매개변수와 단일 매개변수가 혼용된 예>
+```
+static void Main(string[] args)
+{
+    Calculate cal = new Calculate();
+    Console.WriteLine("totalDouble3 : {0}", cal.Sum(2, 4, 5.3, 2.1, 51,65));
+}
+
+public class Calculate
+{
+    public double Sum(int a, int b, params double[] doubleArr)
+    {
+        int cnt;
+        double sum = 0;
+        for (cnt = 0; cnt < doubleArr.Length; cnt++)
+        {
+            sum += doubleArr[cnt];
+        }
+        return sum + a + b;
+    }
+}
+
+//위와 같이 단일 매개변수와 params 매개변수가 혼용되어도 상관없다.
+//다만 주의할 것은 params 매개변수가 항상 맨 마지막에 위치해야 한다.
+```
+---
+## 3. 명명된 인수
+- 정의 : 함수를 호출한 곳에서 미리, 호출받은 함수 내에서 사용할 매개변수에, 명시적으로 값을 할당하는 행위
+- 장점 : 함수를 호출하는 곳에서 변수 선언 및 값할당을 하지 않아도 된다. (불필요한 변수 사용X)
+- 주의 사항 : 매개변수의 값을 명시적으로 할당시, 호출받은 함수 내에서 사용될 매개변수의 이름을 사용해야 한다 -> <U>함수를 호출한 곳에 선언된 변수이름 사용시 **컴파일 에러 발생**</U>
+
+<예시>
+```
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        CalculateOld calOld = new CalculateOld();
+        int mainA = 10;
+        int mainB = 20;
+
+        Console.WriteLine("old Int : {0}", calOld.plusInt(mainA, mainB)); // 1번 예시
+        //Console.WriteLine("old Int : {0}", calOld.plusInt(mainA : 10, mainB : 20)); // 2번 예시
+        Console.WriteLine("old Int : {0}", calOld.plusInt(localA : 10, localB : 20)); // 3번 예시
+    }
+}
+
+public class CalculateOld
+{
+    public int plusInt(int localA, int localB)
+    {
+        return localA + localB;
+    }
+}
+// 1번 예시 : 함수를 호출한 곳에서 선언한 변수를, 함수의 매개변수로 전달하는 경우 (일반적인 예시)
+// 2번 예시 : 컴파일 에러 (잘못된 예시)
+// 3번 예시 : 함수를 호출한 곳에서, 함수 내에서 사용할 매개변수에, 값을 미리 넣어서 전달하는 경우(명명된 인수 적용 예시)
+```

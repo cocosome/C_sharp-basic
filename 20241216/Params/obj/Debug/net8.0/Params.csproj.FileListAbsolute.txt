@@ -1,0 +1,15 @@
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\bin\Debug\net8.0\Params.exe
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\bin\Debug\net8.0\Params.deps.json
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\bin\Debug\net8.0\Params.runtimeconfig.json
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\bin\Debug\net8.0\Params.dll
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\bin\Debug\net8.0\Params.pdb
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\obj\Debug\net8.0\Params.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\obj\Debug\net8.0\Params.AssemblyInfoInputs.cache
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\obj\Debug\net8.0\Params.AssemblyInfo.cs
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\obj\Debug\net8.0\Params.csproj.CoreCompileInputs.cache
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\obj\Debug\net8.0\Params.sourcelink.json
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\obj\Debug\net8.0\Params.dll
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\obj\Debug\net8.0\refint\Params.dll
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\obj\Debug\net8.0\Params.pdb
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\obj\Debug\net8.0\Params.genruntimeconfig.cache
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Params\obj\Debug\net8.0\ref\Params.dll

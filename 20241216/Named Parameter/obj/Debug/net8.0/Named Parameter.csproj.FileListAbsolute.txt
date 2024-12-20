@@ -1,0 +1,15 @@
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\bin\Debug\net8.0\Named Parameter.exe
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\bin\Debug\net8.0\Named Parameter.deps.json
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\bin\Debug\net8.0\Named Parameter.runtimeconfig.json
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\bin\Debug\net8.0\Named Parameter.dll
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\bin\Debug\net8.0\Named Parameter.pdb
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\obj\Debug\net8.0\Named Parameter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\obj\Debug\net8.0\Named Parameter.AssemblyInfoInputs.cache
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\obj\Debug\net8.0\Named Parameter.AssemblyInfo.cs
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\obj\Debug\net8.0\Named Parameter.csproj.CoreCompileInputs.cache
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\obj\Debug\net8.0\Named Parameter.sourcelink.json
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\obj\Debug\net8.0\Named Parameter.dll
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\obj\Debug\net8.0\refint\Named Parameter.dll
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\obj\Debug\net8.0\Named Parameter.pdb
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\obj\Debug\net8.0\Named Parameter.genruntimeconfig.cache
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20241216\Named Parameter\obj\Debug\net8.0\ref\Named Parameter.dll
