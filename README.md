@@ -83,7 +83,7 @@ string grade = score switch
 
 ---
 > 학습 내용
-## 1. ref 키워드
+### 1. ref 키워드
 - ref 키워드 동작 형태 :
     * ref키워드를 사용하면, 매개변수가 있는 함수 호출시, 메모리에 새로 영역을 할당 후 값을 저장하는 과정 없이, 호출했던 영역에 선언되었던 변수(매개변수)를 그대로 함수 내에서 사용한다. 
     * 떄문에 함수 내에서 변수의 값이 변경되면, 호출했던 영역에 선언되었던 변수의 값에도 그대로 반영된다. 
@@ -120,7 +120,7 @@ string grade = score switch
 
 ---
 > 학습 내용
-## 1. out 키워드
+### 1. out 키워드
 - out 키워드와 ref 키워드의 공통점 : 
     * out 키워드의 동작방식은 호출한 함수의 변수를 호출받은 함수의 매개변수로 사용한다는(메모리 주소 동일) 점에서는 ref 키워드와 동일하다.
 - out 키워드와 ref 키워드의 차이점 : 
@@ -154,7 +154,7 @@ public void noChange(int a, int b, out int quotient, outint remainder)
 3. 명명된 인수
 ---
 > 학습 내용
-## 1.Overloading
+### 1.Overloading
 - 정의 : 이름은 같으나 매개변수의 자료형이 다른 함수를 선언하여 사용하는 행위
 - 사용 시기 :
     1. 기존 함수와 동작은 같으나, 매개변수의 자료형이 다를 때
@@ -199,7 +199,7 @@ public double plus(int a, int b)
 //위의 경우 컴파일 에러 발생
 ```
 ---
-## 2. Params : 가변길이 인수
+### 2. Params : 가변길이 인수
 - 정의 : 매개변수 갯수가 특정되지 않은 함수에서 매개변수 앞에 붙이는 키워드
 - 주의 사항
     1. params 키워드를 갖는 변수는 항상 <U>매개변수중 맨 마지막에 위치해야 한다</U> -> 아닐시 **컴파일 에러** 발생
@@ -296,7 +296,7 @@ public class Calculate
 //다만 주의할 것은 params 매개변수가 항상 맨 마지막에 위치해야 한다.
 ```
 ---
-## 3. 명명된 인수
+### 3. 명명된 인수
 - 정의 : 함수를 호출한 곳에서 미리, 호출받은 함수 내에서 사용할 매개변수에, 명시적으로 값을 할당하는 행위
 - 장점 : 함수를 호출하는 곳에서 변수 선언 및 값할당을 하지 않아도 된다. (불필요한 변수 사용X)
 - 주의 사항 : 매개변수의 값을 명시적으로 할당시, 호출받은 함수 내에서 사용될 매개변수의 이름을 사용해야 한다 -> <U>함수를 호출한 곳에 선언된 변수이름 사용시 **컴파일 에러 발생**</U>
@@ -339,3 +339,112 @@ public class CalculateOld
     1. 참조형 타입이다.
     2. 필드와 메소드를 멤버로 가지며 멤버앞에 한정자(public, private, ...)를 붙일 수 있다.
     3. 일반적으로 Class 이름 첫글자는 대문자로 선언한다.
+---
+## 2025.01.02
+> 학습 목차
+1. Class의 생성자(Constructor)
+2. Class의 소멸자(Destructor)
+---
+> 학습 내용
+### 1. Class의 생성자(Constructor)
+- 생성자의 특징
+    1. Class가 생성될 때 가장 먼저 호출되는 메소드로 Class이름과 같은 이름을 가진다.
+    2. 보통 Class 멤버의 초기화를 담당한다.
+    3. 다른 메소드와 마찬가지로 Overloading이 가능하다.
+    4. return 타입이 존재하지 않는다. (return X)
+
+- 생성자의 명시적 구현과 암묵적 호출
+    1. 생성자를 명시적으로 구현하지 않은 경우
+        - 객체 생성시, 시스템에서 자동으로 매개변수가 없는 생성자 호출
+        - 단, 객체를 생성하면서 생성자에 매개변수를 전달 할 순 없음
+
+        <예시>
+        ```
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                BV CBV = new BV();          // 정상 동작
+                BV KBV = new BV(3, 7);      // 생성자 구현X -> 매개변수X -> 에러 
+            }
+        }
+
+        public class BV
+        {
+            // 생성자 구현 X
+        }
+        ```
+
+    2. 생성자를 명시적으로 구현한 경우
+        - 객체 생성시, 구현한 생성자와 새로 만든 객체간 매개변수 갯수 및 타입이 일치하는 경우, 해당 생성자 호출
+
+        <예시>
+        ```
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                BV CBV = new BV();      // 매개변수 없는 생성자 구현X -> 에러
+                BV KBV = new BV(1);     // 정상 동작
+            }
+        }
+
+        public class BV
+        {
+            public int PIR;
+            public int MOTD;
+            public BV(int pir, int motd) // 생성자 구현 O
+            {
+                PIR = pir;
+                MOTD = motd;
+            }
+        }
+        ```
+---
+### 2. Class의 소멸자(Destructor)
+- 소멸자의 특징
+    1. 객체가 메모리에서 사라질 때 Garbage Collect(GC)에 의해 자동으로 호출되는 메소드로, Class이름과 같은 이름을 가진다.
+    2. 프로그래머가 명시적으로 호출할 수 없으며, 일반적으로 명시적으로 구현하지 않는다.
+    3. 한 Class당 하나만 존재할 수 있다 -> 때문에 Overloading 불가
+    4. return 타입이 존재하지 않는다. (return X)
+    5. 매개변수를 갖지 않는다.
+    6. 한정자가 붙지 않는다.
+
+<예시>
+```
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        BV CBV = new BV();
+        BV KBV = new BV(3, 7);
+        GC.Collect();
+    }
+}
+
+public class BV
+{
+    public int PIR;
+    public int MOTD;
+
+    public BV()
+    {
+        Console.WriteLine("BV Initialize X");
+    }
+
+    public BV(int pir, int motd)
+    {
+        PIR = pir;
+        MOTD = motd;
+        Console.WriteLine("BV Initialize PIR : {0}, MOTD : {1}", PIR, MOTD);
+    }
+
+    ~BV() // 소멸자의 명시적 구현
+    {
+        Console.WriteLine("BV log off"); // 콘솔창에 출력X
+    }
+}
+```
+---
+
+
