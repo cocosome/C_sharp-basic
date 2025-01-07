@@ -446,5 +446,68 @@ public class BV
 }
 ```
 ---
+## 2025.01.03
+> 학습 목차
+1. 상속
+2. Overriding
+---
+> 학습 내용
+### 1. 상속
+- 정의 : 부모 Class의 멤버를 자식 Class에서 별도의 선언 없이 사용 가능하도록 하는 기능
+- 장점
+    1. 유지보수 용이
+    2. 중복 코드 감소
+- 유의할 점 : 자식 Class의 객체를 생성한 경우, <U>부모 Class의 생성자가 수행된 후 자식 Class의 생성자가 수행된다.</U>
 
+<예시>
+```
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        BV bv = new BV();       // 부모 Class
+        bv.Initialize(3, 7);
+
+        EBV ebv = new EBV();    // 자식 Class
+        ebv.Initialize(3, 14);  // Class내부에 별도의 필드 선언 없이도 상속받은 필드를 사용 가능
+    }
+}
+
+public class BV   // 부모 Class
+{
+    public int UV;
+    public int MOTD;
+    public BV()
+    {
+        UV = 0;
+        MOTD = 0;
+        Console.WriteLine("BV 초기세팅 -> UV : {0}, MOTD : {1}", UV, MOTD);
+    }
+    public void Initialize(int uv, int motd)
+    {
+        UV = uv;
+        MOTD = motd;
+        Console.WriteLine("BV 초기화값 -> UV : {0}, MOTD : {1}", UV, MOTD);
+    }
+}
+public class EBV : BV   // 자식 Class, EBV가 BV의 Class 멤버를 상속받음
+{
+    public void Initialize(int uv, int motd) //부모 Class의 메소드를 Overriding 함
+    {
+        UV = uv;
+        MOTD = motd;
+        Console.WriteLine("EBV 초기화값 -> UV : {0}, MOTD : {1}", UV, MOTD);
+        Console.WriteLine("이 BV는 EBV 입니다.");
+    }
+}
+```
+---
+
+### 2. Overriding
+- 정의 : 부모 Class로 부터 상속받은 메소드를 자식 Class에서 재정의 하여 사용하는 기능
+- 사용 시기 : 부모 Class로부터 상속받은 메소드가 자식 Class에서는 다른 동작을 해야 하는 경우
+- 유의할 점
+    1. Overriding이 성립하기 위해선 부모 Class와 자식 Class의 메소드이름, 매개변수 타입 및 갯수가 일치해야 한다.
+    2. 별도의 Overriding이 없다면 부모 Class의 메소드와 같은 동작을 하는 메소드를 상속받는다.
+---
 

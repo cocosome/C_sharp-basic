@@ -1,0 +1,15 @@
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\bin\Debug\net8.0\Inheritance_Overriding.exe
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\bin\Debug\net8.0\Inheritance_Overriding.deps.json
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\bin\Debug\net8.0\Inheritance_Overriding.runtimeconfig.json
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\bin\Debug\net8.0\Inheritance_Overriding.dll
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\bin\Debug\net8.0\Inheritance_Overriding.pdb
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\obj\Debug\net8.0\Inheritance_Overriding.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\obj\Debug\net8.0\Inheritance_Overriding.AssemblyInfoInputs.cache
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\obj\Debug\net8.0\Inheritance_Overriding.AssemblyInfo.cs
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\obj\Debug\net8.0\Inheritance_Overriding.csproj.CoreCompileInputs.cache
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\obj\Debug\net8.0\Inheritance_Overriding.sourcelink.json
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\obj\Debug\net8.0\Inheritance_Overriding.dll
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\obj\Debug\net8.0\refint\Inheritance_Overriding.dll
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\obj\Debug\net8.0\Inheritance_Overriding.pdb
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\obj\Debug\net8.0\Inheritance_Overriding.genruntimeconfig.cache
+C:\Users\rlawngus\Desktop\jhKim\Code\branches\C-sharp-basic_branch\20250103\Inheritance_Overriding\obj\Debug\net8.0\ref\Inheritance_Overriding.dll
